@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          AutoPlay
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -68,23 +68,13 @@
           </q-item-section>
         </q-item>
 
-        <q-item clickable tag="a" target="_blank" href="https://twitter.quasar.dev">
+        <q-item >
           <q-item-section avatar>
-            <q-icon name="rss_feed" />
+            <q-icon name="ion-ios-log-out" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Twitter</q-item-label>
-            <q-item-label caption>@quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable tag="a" target="_blank" href="https://facebook.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="public" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Facebook</q-item-label>
-            <q-item-label caption>@QuasarFramework</q-item-label>
+            <q-item-label>Sair</q-item-label>
+            <q-item-label caption></q-item-label>
           </q-item-section>
         </q-item>
       </q-list>

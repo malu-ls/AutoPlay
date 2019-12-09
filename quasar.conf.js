@@ -54,7 +54,9 @@ module.exports = function (ctx) {
       all: 'auto',
 
       components: [
-        'QIcon'
+        'QIcon',
+        'QInput',
+        'QBtn'
       ],
       directives: [],
 
@@ -152,8 +154,6 @@ module.exports = function (ctx) {
       // id: 'org.cordova.quasar.app',
       // noIosLegacyBuildFlag: true, // uncomment only if you know what you are doing
     },
-
-
     // https://quasar.dev/quasar-cli/developing-capacitor-apps/configuring-capacitor
     capacitor: {
       // hideSplashscreen: false

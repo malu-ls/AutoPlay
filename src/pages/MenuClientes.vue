@@ -1,33 +1,91 @@
 <template>
   <div class="q-pa-md">
-    <div class="q-gutter-md row items-start">
-      <q-input v-model="password" filled type="password" hint="Password" />
+    <div class="q-gutter-md row">
+      <h5>Clientes</h5>
+      <!-- <div class="selecaao">
+     <q-select v-model="model" :options="options" label="Selecione" />
+      </div>-->
 
-      <q-input v-model="password" filled :type="isPwd ? 'password' : 'text'" hint="Password with toggle">
-        <template v-slot:append>
-          <q-icon
-            :name="isPwd ? 'visibility_off' : 'visibility'"
-            class="cursor-pointer"
-            @click="isPwd = !isPwd"
-          />
-        </template>
-      </q-input>
+      <div class="nomeFantasia">
+        Nome Fantasia
+        <q-input filled v-model="text" :readonly="readonly" :disable="disable" label="Embratel" />
+      </div>
 
-      <q-input v-model="email" filled type="email" hint="Email" />
+      <div>
+        Razão Social
+        <q-input
+          filled
+          v-model="text"
+          :readonly="readonly"
+          :disable="disable"
+          label="EMPRESA BRASILEIRA DE TELECOMUNICAÇÕES S.A"
+        />
+      </div>
 
-      <q-input v-model="search" filled type="search" hint="Search">
-        <template v-slot:append>
-          <q-icon name="search" />
-        </template>
-      </q-input>
+      <div>
+        CNPJ
+        <q-input
+          filled
+          v-model="number"
+          :readonly="readonly"
+          :disable="disable"
+          label="57.201.482/0001-65"
+        />
+      </div>
 
-      <q-input v-model="tel" filled type="tel" hint="Telephone number" />
+      <div>
+        Telefone
+        <q-input
+          filled
+          v-model="tel"
+          :readonly="readonly"
+          :disable="disable"
+          label="(86) 84934-3631"
+        />
+      </div>
 
-      <q-input v-model="url" filled type="url" hint="URL" />
+      <div>
+        Planos
+        <q-input filled v-model="text" :readonly="readonly" :disable="disable" label="Plano Ouro" />
+      </div>
 
-      <q-input v-model="time" filled type="time" hint="Native time" />
+      <div class="h3">
+        <h5>Endereço</h5>
+      </div>
 
-      <q-input v-model="date" filled type="date" hint="Native date" />
+      <div class="PrimeiroLinhaEndereco">
+        <div>
+          CEP
+          <q-input filled v-model="number" :readonly="readonly" :disable="disable" label="04619-032" />
+        </div>
+
+        <div>
+          Estado
+          <q-input filled v-model="text" :readonly="readonly" :disable="disable" label="SP" />
+        </div>
+
+        <div>
+          Cidade
+          <q-input filled v-model="text" :readonly="readonly" :disable="disable" label="São Paulo" />
+        </div>
+      </div>
+
+      <div class="SegundaLinhaEndereco">
+        <div>
+          Bairro
+          <q-input filled v-model="text" :readonly="readonly" :disable="disable" label="Campo Belo" />
+        </div>
+
+        <div>
+          Rua
+          <q-input filled v-model="text" :readonly="readonly" :disable="disable" label="Rua Vicente Leporace" />
+        </div>
+
+        <div>
+          Numero e Complemento
+          <q-input filled v-model="text" :readonly="readonly" :disable="disable" label="1011, Comercial" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -36,20 +94,22 @@
 export default {
   data () {
     return {
-      password: '',
-      isPwd: true,
-
-      email: '',
-      search: '',
-      tel: '',
-      url: '',
-      time: '',
-      date: ''
+      readonly: true,
+      disable: true,
+      model: null,
+      options: ['Claro', 'Embratel', 'Telmex', 'Oi', 'Telefônica', 'Vivendi']
     }
   }
 }
 </script>
 
-<style lang="sass">
-
+<style>
+h5 {
+  text-align: center;
+  width: 100vw;
+}
+div.h3 {
+  text-align: center;
+  width: 100vw;
+}
 </style>

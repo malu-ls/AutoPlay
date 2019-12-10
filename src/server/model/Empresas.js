@@ -4,7 +4,7 @@ var EmpresaSchema = new mongoose.Schema({
   empresaRazaoSocial: String,
   empresaNomeFantasia: String,
   empresaCNPJ: Number,
-  empresaPlanp: String,
+  empresaPlano: String,
   empresaContato: Number,
   empresaEndereco: String
 })

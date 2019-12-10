@@ -1,3 +1,3 @@
 <template>
-  <h1>Teste de Rota</h1>
+  <q-input v-model="email" filled type="email" hint="Email" />
 </template>

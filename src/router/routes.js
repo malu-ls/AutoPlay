@@ -1,9 +1,5 @@
-// import Login from '../layouts/Login.vue'
-
 const routes = [
   {
-    // path: '/login',
-    // component: Login => import('layouts/Login.vue'),
     path: '/',
     component: () => import('layouts/MyLayout.vue'),
     children: [
@@ -11,8 +7,8 @@ const routes = [
       { path: '/MenuClientes', component: () => import('src/pages/MenuClientes.vue') },
       { path: '/ListagemVeiculos', component: () => import('src/pages/ListagemVeiculos.vue') },
       { path: '/ListagemTécnico', component: () => import('src/pages/ListagemTecnico.vue') },
-      { path: '/MapaLocalização', component: () => import('src/pages/MapaLocalizacao.vue') }
-      // { path: '/login', name: 'login', component: Login }
+      { path: '/MapaLocalização', component: () => import('src/pages/MapaLocalizacao.vue') },
+      { path: '/Login', component: () => import('src/pages/Login.vue') }
     ]
   }
 ]

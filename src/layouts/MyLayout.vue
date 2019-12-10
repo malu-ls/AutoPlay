@@ -14,8 +14,6 @@
         <q-toolbar-title>
           AutoPlay
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -68,7 +66,7 @@
           </q-item-section>
         </q-item>
 
-        <q-item >
+        <q-item to="/Login">
           <q-item-section avatar>
             <q-icon name="ion-ios-log-out" />
           </q-item-section>

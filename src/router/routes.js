@@ -7,8 +7,14 @@ const routes = [
       { path: '/MenuClientes', component: () => import('src/pages/MenuClientes.vue') },
       { path: '/ListagemVeiculos', component: () => import('src/pages/ListagemVeiculos.vue') },
       { path: '/ListagemTécnico', component: () => import('src/pages/ListagemTecnico.vue') },
-      { path: '/MapaLocalização', component: () => import('src/pages/MapaLocalizacao.vue') },
-      { path: '/Login', component: () => import('src/pages/Login.vue') }
+      { path: '/MapaLocalização', component: () => import('src/pages/MapaLocalizacao.vue') }
+    ]
+  },
+  {
+    path: '/Login',
+    component: () => import('layouts/LoginLayout'),
+    children: [
+      { path: '', component: () => import('src/pages/Login.vue') }
     ]
   }
 ]

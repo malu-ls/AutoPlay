@@ -8,7 +8,7 @@
 
       <div class="nomeFantasia">
         Nome Fantasia
-        <q-input filled v-model="text" :readonly="readonly" :disable="disable" label="Embratel" />
+        <q-input filled v-model="text" :readonly="readonly" :disable="false" label="Embratel" />
       </div>
 
       <div>
@@ -17,7 +17,7 @@
           filled
           v-model="text"
           :readonly="readonly"
-          :disable="disable"
+          :disable="false"
           label="EMPRESA BRASILEIRA DE TELECOMUNICAÇÕES S.A"
         />
       </div>

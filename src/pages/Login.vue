@@ -2,9 +2,9 @@
 <div class="q-pa-md">
     <div class="q-gutter-md">
       <img class="logo" vspace="35px" hspace="15px" src="../statics/icons/AutoPlay.jpg" width=200 height=200>
-      <q-input filled v-model="user" type='text' label="Usuário" />
+      <q-input class="inputText" filled v-model="user" type='text' label="Usuário" />
 
-      <q-input filled required v-model="password" :type="isPwd ? 'password' : 'text'" label="Senha" >
+      <q-input class="inputText" filled required v-model="password" :type="isPwd ? 'password' : 'text'" label="Senha" >
         <template v-slot:append>
           <q-icon
             :name="isPwd ? 'visibility_off' : 'visibility'"
@@ -78,6 +78,10 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 20%;
+
+.inputText
+  width: 400px;
+  margin: 20px auto;
 
 .btn
   display: block;
